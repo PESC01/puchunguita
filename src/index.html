@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Flores</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="container">
+        <div class="name-container">
+            <h1 class="name" id="personName">TE AMO ESTHER MI PUCHUNGUITA</h1>
+        </div>
+        
+        <div class="box" id="giftBox">
+            <div class="box-lid">
+                <div class="box-lid-top"></div>
+                <div class="box-lid-front"></div>
+            </div>
+            <div class="box-body">
+                <div class="box-body-front"></div>
+                <div class="box-body-back"></div>
+                <div class="box-body-left"></div>
+                <div class="box-body-right"></div>
+                <div class="box-body-bottom"></div>
+            </div>
+            <div class="box-ribbon"></div>
+        </div>
+        
+        <div class="flowers-container" id="flowersContainer"></div>
+    </div>
+
+    <audio id="explosionSound" src="assets/audio/explosion.mp3" preload="auto"></audio>
+
+    <script src="js/box.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/flowers.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

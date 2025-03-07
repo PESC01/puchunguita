@@ -1,0 +1,127 @@
+/* Animación para la apertura de la caja */
+@keyframes openBox {
+    0% {
+        transform: rotateX(0);
+    }
+
+    70% {
+        transform: rotateX(-110deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+    }
+}
+
+.box.open .box-lid {
+    animation: openBox 1s forwards;
+}
+
+/* Animación para hacer que la caja desaparezca */
+@keyframes fadeBox {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.box.fade-out {
+    animation: fadeBox 0.8s forwards;
+}
+
+/* Animación para la aparición del nombre */
+@keyframes showName {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name-container.visible {
+    animation: showName 1.5s forwards;
+}
+
+@keyframes rotateFly {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(var(--r));
+    }
+}
+
+.flower.rotate-while-flying {
+    animation: rotateFly 3s forwards ease-in-out;
+}
+
+@keyframes flowerFly {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.3);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    15% {
+        transform: translate(calc(var(--x) * 0.1), calc(var(--y) * 0.1)) scale(1.1);
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(0.7);
+    }
+}
+
+.flower.animate {
+    animation: flowerFly 3s forwards ease-out;
+}
+
+/* Animación para simular un latido en el nombre */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.name.heartbeat {
+    animation: heartbeat 1.5s infinite;
+}
